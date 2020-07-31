@@ -23,6 +23,7 @@ export const HeaderMenuLeft = styled.ul`
     transition: all 0.3s;
     position: relative;
     overflow: visible;
+
     span {
       margin-left: 0.75rem;
       transition: all 0.3s;
@@ -36,14 +37,29 @@ export const HeaderMenuLeft = styled.ul`
     &.activeClass {
       background-color: ${(props) => props.theme.blueColor};
     }
+    &.hasDropDown {
+      &::after {
+        content: "";
+        width: 1.2rem;
+        height: 1.2rem;
+        background: ${(props) => props.theme.blackColor};
+        position: absolute;
+        bottom: -1.5rem;
+        right: 1rem;
+        transform: rotate(45deg);
+        z-index: 10;
+      }
+    }
 
     .dropdown {
       width: 10rem;
       height: 4rem;
       background: ${(props) => props.theme.blackColor};
       position: absolute;
-      top: 110%;
+      top: 115%;
       left: 0;
+      z-index: 11;
+      padding: 1rem;
     }
   }
 `;

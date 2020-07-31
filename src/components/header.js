@@ -6,7 +6,7 @@ import {
   HeaderMenuRight,
 } from "../styles/headerStyle";
 import uuid from "react-uuid";
-import { MenuIcon, FlyButton, Chevron } from "./icons";
+import { MenuIcon, FlyButton, Chevron, Pen } from "./icons";
 const menuLeftData = [
   {
     id: 1,
@@ -17,6 +17,12 @@ const menuLeftData = [
   {
     id: 2,
     icon: <FlyButton />,
+    hasDropDown: true,
+    dropDownContent: "content",
+  },
+  {
+    id: 3,
+    icon: <Pen />,
     hasDropDown: true,
     dropDownContent: "content",
   },
@@ -36,7 +42,13 @@ const Header = () => {
         {menuLeftData.map((item) => (
           <li
             key={uuid()}
-            className={item.id === active ? "activeClass" : ""}
+            className={
+              item.id === active &&
+              "activeClass " +
+                (active === item.id &&
+                  item.dropDownContent !== "" &&
+                  "hasDropDown")
+            }
             onClick={() => handleClick(item)}
           >
             {item.icon}
