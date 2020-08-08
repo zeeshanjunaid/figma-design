@@ -143,8 +143,7 @@ export const HeaderMenuRight = styled.div`
     }
 
     .dropdown {
-      width: 10rem;
-      height: 4rem;
+      width: 20rem;
       background: ${(props) => props.theme.blackColor};
       position: absolute;
       top: 115%;
@@ -172,7 +171,7 @@ export const HeaderMenuRight = styled.div`
   .dpIcon {
     color: ${(props) => props.theme.whiteColor};
     background: #fbc701;
-    padding: .8rem 1.1rem;
+    padding: 0.8rem 1.1rem;
     font-size: 1.2rem;
     margin-right: 1rem;
     border-radius: 150%;

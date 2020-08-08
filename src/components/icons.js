@@ -133,3 +133,115 @@ export const Play = () => (
     ></path>
   </svg>
 );
+export const Plus = () => (
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5.5 5.5v-5h1v5h5v1h-5v5h-1v-5h-5v-1h5z"
+      fillRule="nonzero"
+      fillOpacity="1"
+      stroke="none"
+    ></path>
+  </svg>
+);
+export const Check = () => (
+  <svg
+    width="8"
+    height="8"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.176 2.824L3.06 4.706 6.824.941 8 2.118 3.059 7.059 0 4l1.176-1.176z"
+      fillRule="evenodd"
+      fillOpacity="1"
+      stroke="none"
+    ></path>
+  </svg>
+);
+
+export const Vector = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <path d="M0.5 3.84223L9.5 6.15777" fill="none" strokeWidth="1"></path>
+  </svg>
+);
+export const Rectangle = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <path
+      d="M0.565455 0.5H9.43455V9.5H0.565455V0.5Z"
+      fill="none"
+      strokeWidth="1"
+    ></path>
+  </svg>
+);
+export const Lock = () => (
+  <svg
+    width="7"
+    height="10"
+    viewBox="0 0 7 10"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1 4V2.5C1 1.12 2.12 0 3.5 0 4.88 0 6 1.12 6 2.5V4h.5c.276 0 .5.224.5.5v5c0 .276-.224.5-.5.5h-6c-.276 0-.5-.224-.5-.5v-5c0-.276.224-.5.5-.5H1zm4-1.5V4H2V2.5C2 1.672 2.672 1 3.5 1 4.328 1 5 1.672 5 2.5z"
+      fillRule="evenodd"
+      fillOpacity="1"
+      stroke="none"
+    ></path>
+  </svg>
+);
+export const Unlock = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 6v1h.5c.276 0 .5.224.5.5v5c0 .276-.224.5-.5.5h-6c-.276 0-.5-.224-.5-.5v-5c0-.276.224-.5.5-.5H9V4.5C9 3.12 10.12 2 11.5 2 12.88 2 14 3.12 14 4.5V6h-1V4.5c0-.828-.672-1.5-1.5-1.5-.828 0-1.5.672-1.5 1.5V6z"
+      fillRule="evenodd"
+      fillOpacity="1"
+      stroke="none"
+    ></path>
+  </svg>
+);
+export const Visible = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 10c1.105 0 2-.895 2-2 0-1.105-.895-2-2-2-1.104 0-2 .895-2 2 0 1.105.896 2 2 2z"
+      fillRule="nonzero"
+      fillOpacity="1"
+      fill="#000"
+      stroke="none"
+    ></path>
+    <path
+      d="M8 4c2.878 0 5.378 1.621 6.635 4-1.257 2.379-3.757 4-6.635 4-2.878 0-5.377-1.621-6.635-4C2.623 5.621 5.122 4 8 4zm0 7c-2.3 0-4.322-1.194-5.478-3C3.678 6.194 5.7 5 8 5c2.3 0 4.322 1.194 5.479 3C12.322 9.806 10.3 11 8 11z"
+      fillRule="evenodd"
+      fillOpacity="1"
+      stroke="none"
+    ></path>
+  </svg>
+);
+export const Unvisible = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M13.508 7.801c.556-.527 1.036-1.134 1.422-1.801h-1.185C12.48 7.814 10.378 9 8 9 5.622 9 3.52 7.814 2.254 6H1.07c.386.667.866 1.274 1.421 1.801L.896 9.396l.708.707L3.26 8.446c.71.523 1.511.932 2.374 1.199l-.617 2.221.964.268.626-2.255C7.06 9.96 7.525 10 8 10c.475 0 .94-.041 1.392-.12l.626 2.254.964-.268-.617-2.221c.863-.267 1.663-.676 2.374-1.2l1.657 1.658.708-.707-1.595-1.595z"
+      fillRule="nonzero"
+      fillOpacity="1"
+      stroke="none"
+    ></path>
+  </svg>
+);

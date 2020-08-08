@@ -36,16 +36,18 @@ const GlobalStyle = createGlobalStyle`
   body{
     box-sizing: border-box;
     color: ${(props) => props.theme.blackColor};
-    background: ${(props) => props.theme.whiteColor};
+    background: ${(props) => props.theme.greyColor};
     color: ${(props) => props.theme.color};
     min-height: 100vh;
     overscroll-behavior: none;
+    overflow: hidden;
     font-family: ${(props) => props.theme.fontPrimary};
   }
 `;
 function App() {
   const theme = {
     darkColor: "#2c2c2c",
+    offWhiteColor: "#b3b3b3",
     whiteColor: "#ffffff",
     blackColor: "#000000",
     greyColor: "#e5e5e5",
