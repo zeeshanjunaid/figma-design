@@ -17,23 +17,13 @@ import {
   Unlock,
 } from "./icons";
 
-const dataContent = [
-  {
-    id: 1,
-    name: "Vector 1",
-    icon: <Vector />,
-  },
-  {
-    id: 2,
-    name: "Rectangle 1",
-    icon: <Rectangle />,
-  },
-];
-
 const LeftBar = () => {
   const [leftbarHeader, setLeftbarHeader] = useState(true);
-  const [visible, setVisible] = useState(true);
-  const [lock, setLock] = useState(false);
+  const [visible1, setVisible1] = useState(true);
+  const [visible2, setVisible2] = useState(true);
+  const [lock1, setLock1] = useState(true);
+  const [lock2, setLock2] = useState(true);
+
   return (
     <LeftSideBar>
       <HeaderTop>
@@ -67,28 +57,50 @@ const LeftBar = () => {
         </LeftBarHeader>
       )}
       <LeftBarContent>
-        {dataContent.map((data, index) => (
-          <li key={index} className={!visible ? "unvisibleItem" : null}>
-            <span className="icon-left">{data.icon}</span>
-            {data.name}
-            <div className="right-icons">
-              <span
-                onClick={() => {
-                  setLock(!lock);
-                }}
-              >
-                {lock ? <Unlock /> : <Lock clasName="unlock" />}
-              </span>
-              <span
-                onClick={() => {
-                  setVisible(!visible);
-                }}
-              >
-                {visible ? <Visible /> : <Unvisible clasName="unvisible" />}
-              </span>
-            </div>
-          </li>
-        ))}
+        <li className={!visible1 ? "unvisibleItem" : null}>
+          <span className="icon-left">
+            <Vector />
+          </span>
+          Vector 1
+          <div className="right-icons">
+            <span
+              onClick={() => {
+                setLock1(!lock1);
+              }}
+            >
+              {lock1 ? <Unlock /> : <Lock clasName="unlock" />}
+            </span>
+            <span
+              onClick={() => {
+                setVisible1(!visible1);
+              }}
+            >
+              {visible1 ? <Visible /> : <Unvisible clasName="unvisible" />}
+            </span>
+          </div>
+        </li>
+        <li className={!visible2 ? "unvisibleItem" : null}>
+          <span className="icon-left">
+            <Rectangle />
+          </span>
+          Rectangle 1
+          <div className="right-icons">
+            <span
+              onClick={() => {
+                setLock2(!lock2);
+              }}
+            >
+              {lock2 ? <Unlock /> : <Lock clasName="unlock" />}
+            </span>
+            <span
+              onClick={() => {
+                setVisible2(!visible2);
+              }}
+            >
+              {visible2 ? <Visible /> : <Unvisible clasName="unvisible" />}
+            </span>
+          </div>
+        </li>
       </LeftBarContent>
     </LeftSideBar>
   );
