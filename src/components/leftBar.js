@@ -43,7 +43,7 @@ const LeftBar = () => {
       {leftbarHeader && (
         <LeftBarHeader>
           <li className="top">
-            Pages
+            Export
             <span>
               <Plus />
             </span>
