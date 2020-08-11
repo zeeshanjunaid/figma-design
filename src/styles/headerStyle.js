@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderArea = styled.div`
+
   grid-area: header;
   background-color: ${(props) => props.theme.darkColor};
   color: ${(props) => props.theme.whiteColor};

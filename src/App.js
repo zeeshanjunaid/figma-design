@@ -6,6 +6,7 @@ import RightBar from "./components/rightBar";
 import { normalize } from "styled-normalize";
 import { Container } from "./styles/globalStyles";
 import Content from "./components/content";
+import { Pane } from "react-sortable-pane";
 const GlobalStyle = createGlobalStyle`
   ${normalize}
   *,
@@ -43,6 +44,10 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     font-family: ${(props) => props.theme.fontPrimary};
   }
+  .resizeable-panel{
+    min-width: 28rem !important;
+    max-width: 60rem;
+  }
 `;
 function App() {
   const theme = {
@@ -59,7 +64,13 @@ function App() {
       <GlobalStyle />
       <Container>
         <Header />
-        <LeftBar />
+        <Pane
+          className="resizeable-panel"
+          resizable={{ x: true, y: false, xy: false }}
+          defaultSize={{ height: "100%" }}
+        >
+          <LeftBar />
+        </Pane>
         <Content />
         <RightBar />
       </Container>
