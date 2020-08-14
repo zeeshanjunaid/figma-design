@@ -17,7 +17,7 @@ export const HeaderTop = styled.div`
 export const RightBarHeader = styled.div`
   list-style: none;
   user-select: none;
-  border-bottom: 0.1rem solid ${(props) => props.theme.greyColor};
+  /* border-bottom: 0.1rem solid ${(props) => props.theme.greyColor}; */
   .bg {
     font-size: 1.1rem;
     font-weight: bold;
@@ -62,8 +62,9 @@ export const RightBarHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
     color: ${(props) => props.theme.offWhiteColor};
+    border-bottom: 0.1rem solid ${(props) => props.theme.greyColor};
     &:hover {
       color: ${(props) => props.theme.blackColor};
     }
@@ -72,6 +73,29 @@ export const RightBarHeader = styled.div`
       &:hover {
         background-color: ${(props) => props.theme.greyColor};
         border-radius: 0.25rem;
+      }
+    }
+  }
+  .pt {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 2rem 1rem;
+    border-bottom: 0.1rem solid ${(props) => props.theme.greyColor};
+    .inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+      font-weight: 200;
+      line-height: 1.4;
+      font-size: .95rem;
+      margin: 2rem 0;
+      margin-right: 3rem;
+      svg {
+        margin-top: -0.8rem;
+        path {
+          fill: black;
+        }
       }
     }
   }

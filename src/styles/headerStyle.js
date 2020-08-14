@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderArea = styled.div`
-
   grid-area: header;
   background-color: ${(props) => props.theme.darkColor};
   color: ${(props) => props.theme.whiteColor};
@@ -52,14 +51,69 @@ export const HeaderMenuLeft = styled.div`
     }
 
     .dropdown {
-      width: 10rem;
-      height: 4rem;
+      width: max-content;
+      min-width: 22rem;
       background: ${(props) => props.theme.blackColor};
       position: absolute;
       top: 115%;
-      left: 0;
+      left: 0.5rem;
       z-index: 11;
-      padding: 1rem;
+    }
+  }
+
+  .dropdown-content {
+    width: 100%;
+    .btf {
+      margin: 1rem 0;
+      padding: 1rem 2rem;
+      color: ${(props) => props.theme.whiteColor};
+      font-weight: 500;
+      font-size: 1.1rem;
+      border-bottom: 0.1rem solid #676767;
+      &:hover {
+        background-color: ${(props) => props.theme.blueColor};
+      }
+    }
+    .input-container {
+      padding: 0 2rem 1.2rem 2rem;
+      border-bottom: 0.1rem solid #676767;
+      input {
+        background-color: transparent;
+        color: #676767;
+        width: 100%;
+        height: 3rem;
+        outline: none;
+        font-size: 1.1rem;
+        padding: 1rem 0.5rem;
+        font-weight: bold;
+        border: 0.2rem solid ${(props) => props.theme.blueColor};
+        border-radius: 0.3rem;
+        ::placeholder {
+          color: #676767;
+        }
+      }
+    }
+    ul {
+      margin: 1rem 0;
+
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid #676767;
+      }
+      li {
+        padding: 1rem 1rem 1rem 3rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
+        &:hover {
+          background-color: ${(props) => props.theme.blueColor};
+        }
+      }
     }
   }
 `;

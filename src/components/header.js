@@ -15,45 +15,8 @@ import {
   Hand,
   Location,
   Play,
+  ArrowRight,
 } from "./icons";
-const menuLeftData = [
-  {
-    id: 1,
-    icon: <MenuIcon />,
-    hasDropDown: false,
-    dropDownContent: "",
-  },
-  {
-    id: 2,
-    icon: <FlyButton />,
-    hasDropDown: true,
-    dropDownContent: "content",
-  },
-  {
-    id: 3,
-    icon: <Pen />,
-    hasDropDown: true,
-    dropDownContent: "content",
-  },
-  {
-    id: 4,
-    icon: <Toolbar />,
-    hasDropDown: false,
-    dropDownContent: "",
-  },
-  {
-    id: 5,
-    icon: <Location />,
-    hasDropDown: false,
-    dropDownContent: "",
-  },
-  {
-    id: 6,
-    icon: <Hand />,
-    hasDropDown: false,
-    dropDownContent: "",
-  },
-];
 
 const menuRightData = [
   {
@@ -70,6 +33,87 @@ const menuRightData = [
   },
 ];
 const Header = () => {
+  const dropDownContent = (
+    <div className="dropdown-content">
+      <p className="btf">Back to Files</p>
+      <div className="input-container">
+        <input type="text" placeholder="search" />
+      </div>
+      <ul>
+        <li>
+          File
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Edit
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          View
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Object
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Vector
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Text
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Plugins
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Integrations
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Preferences
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+        <li>
+          Libraries
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+      </ul>
+      <ul>
+        <li>Get Desktop App</li>
+        <li>
+          Help and Account
+          <span>
+            <ArrowRight />
+          </span>
+        </li>
+      </ul>
+    </div>
+  );
   const [active, setActive] = useState("");
   const handleClick = (item) => {
     if (active === item.id) {
@@ -78,6 +122,44 @@ const Header = () => {
       setActive(item.id);
     }
   };
+  const menuLeftData = [
+    {
+      id: 1,
+      icon: <MenuIcon />,
+      hasDropDown: false,
+      dropDownContent: dropDownContent,
+    },
+    {
+      id: 2,
+      icon: <FlyButton />,
+      hasDropDown: true,
+      dropDownContent: "content",
+    },
+    {
+      id: 3,
+      icon: <Pen />,
+      hasDropDown: true,
+      dropDownContent: "content",
+    },
+    {
+      id: 4,
+      icon: <Toolbar />,
+      hasDropDown: false,
+      dropDownContent: "",
+    },
+    {
+      id: 5,
+      icon: <Location />,
+      hasDropDown: false,
+      dropDownContent: "",
+    },
+    {
+      id: 6,
+      icon: <Hand />,
+      hasDropDown: false,
+      dropDownContent: "",
+    },
+  ];
   return (
     <HeaderArea>
       <HeaderMenuLeft>
@@ -116,7 +198,9 @@ const Header = () => {
         </a>
       </HeaderMenuCenter>
       <HeaderMenuRight>
-        <a className="dpIcon" href="#">Z</a>
+        <a className="dpIcon" href="#">
+          Z
+        </a>
         <button>Share</button>
         {menuRightData.map((item) => (
           <li

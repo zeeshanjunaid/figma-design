@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
   }
   .resizeable-panel{
     min-width: 28rem !important;
-    max-width: 60rem;
+    max-width: 50rem;
   }
 `;
 function App() {

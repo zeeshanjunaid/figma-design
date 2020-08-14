@@ -245,3 +245,19 @@ export const Unvisible = () => (
     ></path>
   </svg>
 );
+
+export const ArrowRight = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M17 14.098l.765.478 8 5 .678.424-.678.424-8 5-.765.478V14.098zm1 1.804v8.196L24.557 20 18 15.902z"
+      fillOpacity="1"
+      fill="#fff"
+      stroke="none"
+    ></path>
+  </svg>
+);

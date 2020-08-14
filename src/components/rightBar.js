@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HeaderTop, RightBarHeader } from "../styles/righttbarStyles";
 import { RightSideBar } from "../styles/globalStyles";
-import { Plus, Visible, Unvisible } from "./icons";
+import { Plus, Visible, Unvisible, Play } from "./icons";
 
 const RightBar = () => {
   const [visible, setVisible] = useState(true);
@@ -21,7 +21,7 @@ const RightBar = () => {
             </div>
             <div>100%</div>
             <span
-            className="eyeIcon"
+              className="eyeIcon"
               onClick={() => {
                 setVisible(!visible);
               }}
@@ -35,6 +35,19 @@ const RightBar = () => {
           <span>
             <Plus />
           </span>
+        </li>
+        <li className="pt">
+          Running Your Prototype
+          <div className="inner">
+            <span>
+              <Play />
+            </span>
+            <div>
+              Use the play button in the toolbar to play your prototype. If
+              there are no connections, the play button can be used to play a
+              presentation of your frames.
+            </div>
+          </div>
         </li>
       </RightBarHeader>
     </RightSideBar>
