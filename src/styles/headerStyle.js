@@ -100,15 +100,22 @@ export const HeaderMenuLeft = styled.div`
         border-bottom: 0.1rem solid #676767;
       }
       li {
-        padding: 0.5rem 1rem 0.5rem 3rem;
+        padding: 0 1rem 0 3rem;
         font-size: 1rem;
         font-weight: 500;
         display: flex;
+        height: 3rem;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        span {
+          position: absolute;
+          right: 10%;
+          top: 10%;
+        }
         svg {
-          width: 3rem;
-          height: 3rem;
+          width: 2.5rem;
+          height: 2.5rem;
         }
         &:hover {
           background-color: ${(props) => props.theme.blueColor};
