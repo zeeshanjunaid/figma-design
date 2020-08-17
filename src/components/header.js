@@ -177,7 +177,7 @@ const Header = () => {
           >
             {item.icon}
             {item.hasDropDown && (
-              <span>
+              <span className="move-icon">
                 <Chevron />
               </span>
             )}

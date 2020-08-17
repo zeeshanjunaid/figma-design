@@ -29,7 +29,7 @@ export const HeaderMenuLeft = styled.div`
     }
     &:hover {
       background-color: ${(props) => props.theme.blackColor};
-      span {
+      span.move-icon {
         transform: translateY(0.3rem);
       }
     }
@@ -94,14 +94,14 @@ export const HeaderMenuLeft = styled.div`
       }
     }
     ul {
-      margin: 1rem 0;
+      margin: 0;
 
       &:not(:last-child) {
         border-bottom: 0.1rem solid #676767;
       }
       li {
-        padding: 1rem 1rem 1rem 3rem;
-        font-size: 1.1rem;
+        padding: 0.5rem 1rem 0.5rem 3rem;
+        font-size: 1rem;
         font-weight: 500;
         display: flex;
         justify-content: space-between;
